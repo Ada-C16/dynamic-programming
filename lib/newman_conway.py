@@ -1,4 +1,5 @@
 
+ 
 
 # Time complexity: ?
 # Space Complexity: ?
@@ -7,4 +8,18 @@ def newman_conway(num):
         Time Complexity: ?
         Space Complexity: ?
     """
-    pass
+    if num < 1:
+        raise ValueError("Invalid newman conway number")
+    if num == 1:
+        return "1"
+    
+    memo = [0, 1, 1]
+    output = "1"
+
+    count = 3
+    while count <= num:
+        memo.append(memo[memo[count - 1]] + memo[count - memo[count - 1]])
+        count += 1
+
+    answer = [str(item) for item in memo]
+    return " ".join(answer[1:])
