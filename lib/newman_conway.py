@@ -1,16 +1,13 @@
 
 
-# Time complexity: ?
-# Space Complexity: ?
+# Time complexity: O(n)
+# Space Complexity: O(n)
 
     
 def newman_conway(num):
     if num == 0:
         raise ValueError
-    
-    # if num == 1 or num == 2:
-    #     return "1" 
-    
+
     memo_arr = [0, 1, 1]
     
     for i in range(3, num + 1):
@@ -22,5 +19,3 @@ def newman_conway(num):
         
     res_str = res_str[:-1]
     return res_str
-
-print(newman_conway(1))
