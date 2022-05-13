@@ -10,27 +10,30 @@ def max_sub_array(nums):
     if len(nums) == 0:
         return 0
     
-    max = 0
-    current = 0
-    end = 1
-    while end <= len(nums):
+    max = None
+    current = None
+    i = 0
+    while i < len(nums):
         
         # get next number
-        num = nums[end - 1]
+        num = nums[i]
 
         # update current
-        current += num
-
-        if current < 0:
-            current = 0
+        if not current:
+            current = num
+        else:
+            current += num
 
         # if current sum is > max, replace it
-        else:
-            if current > max:
-                max = current
+        if not max or current > max:
+            max = current
+
+        # if current is negative, start over
+        if current < 0:
+            current = None
 
         # move forward by one
-        end += 1
+        i += 1
 
     return max
 
