@@ -1,7 +1,7 @@
 
 
-# Time complexity: ?
-# Space Complexity: ?
+# Time complexity: O(n), only iterate through the list once, use list indexing which is O(n)
+# Space Complexity: O(n) bc we made a list of size n + 1
 def newman_conway(num):
     if num < 1:
         raise(ValueError)
