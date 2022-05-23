@@ -9,4 +9,14 @@ def max_sub_array(nums):
         return 0
     if len(nums) == 0:
         return 0
-    pass
+    
+    # building memo
+    max_sub_array = [0] * len(nums)
+
+    # establishing base case
+    max_sub_array[0] = nums[0]
+
+    for i in range(1, len(nums)):
+        # finding the max of the subarray compared to the current value in nums
+        max_sub_array[i] = max(max_sub_array[i - 1] + nums[i], nums[i])
+    return max(max_sub_array)
