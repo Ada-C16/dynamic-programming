@@ -5,7 +5,7 @@
 def newman_conway(num):
     """ Returns a list of the Newman Conway numbers for the given value.
         Time Complexity: O(n) - Where n is the num passed to the function
-        Space Complexity: O(1)
+        Space Complexity: O(n)
     """
     if num <= 0:
         raise ValueError("num must be > 0")
