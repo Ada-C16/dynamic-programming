@@ -9,4 +9,5 @@ def max_sub_array(nums):
         return 0
     if len(nums) == 0:
         return 0
+    
     pass
