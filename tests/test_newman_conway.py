@@ -1,6 +1,7 @@
 import pytest
 from lib.newman_conway import newman_conway
 
+
 def test_newman_conway_for_base_cases():
     # Arrange
     input = 0
@@ -11,22 +12,21 @@ def test_newman_conway_for_base_cases():
 
     # Arrange
     input = 1
-    
+
     # Act
     answer = newman_conway(input)
 
     # Assert
     assert answer == "1"
 
-
     # Arrange
     input = 2
 
     # Act
     answer = newman_conway(input)
-    
+
     # Assert
-    assert answer == "1 1"        
+    assert answer == "1 1"
 
 
 def test_newman_conway_for_13():
@@ -38,6 +38,7 @@ def test_newman_conway_for_13():
 
     # Assert
     assert answer == "1 1 2 2 3 4 4 4 5 6 7 7 8"
+
 
 def test_newman_conway_for_20():
     # Arrange
