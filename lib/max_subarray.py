@@ -5,8 +5,19 @@ def max_sub_array(nums):
         Time Complexity: ?
         Space Complexity: ?
     """
+    
+     # compare sum of current subarray as iterating thru array, remove subarrays with negative sum, keep track of max sum at each index
+     
     if nums == None:
         return 0
     if len(nums) == 0:
         return 0
-    pass
+    
+    currentMaxSum = 0
+    maxSubArray = nums[0]
+
+    for i in range(len(nums)):
+        currentMaxSum = max(nums[i], currentMaxSum + nums[i])
+        maxSubArray = max(maxSubArray, currentMaxSum)
+
+    return maxSubArray
