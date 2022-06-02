@@ -1,8 +1,8 @@
 
 from multiprocessing.sharedctypes import Value
     
-# Time complexity: ?
-# Space Complexity: ?
+# Time complexity: O(N)
+# Space Complexity: O(N)
 def newman_conway(num):
     """ Returns a list of the Newman Conway numbers for the given value.
         Time Complexity: ?
