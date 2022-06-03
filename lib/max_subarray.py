@@ -12,8 +12,8 @@ def max_sub_array(nums):
 
     max_sum = cur_sum = nums[0]
     for i in range(1, len(nums)):
+        if cur_sum < 0:
+            cur_sum = 0
         cur_sum += nums[i]
         max_sum = max(max_sum, cur_sum)
-        if cur_sum <= 0:
-            cur_sum = 0
     return max_sum
