@@ -13,7 +13,8 @@ for all n > 2
 P(n) = P(P(n - 1)) + P(n - P(n - 1))
 ```
 
-Given a number n then print n terms of Newman-Conway Sequence
+For a given a number: n 
+print n terms of Newman-Conway Sequence
 
 Examples:
 
