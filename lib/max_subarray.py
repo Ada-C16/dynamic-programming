@@ -7,6 +7,8 @@ def max_sub_array(nums):
     """
     if not nums:
         return 0 
+    if not len(nums):
+        return 0
 
     max_so_far = 0
     max_ending_here = 0
