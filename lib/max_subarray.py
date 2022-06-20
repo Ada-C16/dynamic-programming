@@ -9,4 +9,13 @@ def max_sub_array(nums):
         return 0
     if len(nums) == 0:
         return 0
-    pass
+    #  initialize maxSub -> first nsumber in the array
+    maxSub = nums[0]
+    currentSum = nums[0]
+    for index in range(1, len(nums)):
+        # start at index 1
+        # compare current value with current sum
+        currentSum = max(nums[index], currentSum + nums[index])
+        # assign to the max of itself compared to the currentSum
+        maxSub = max(maxSub, currentSum)
+    return maxSub
