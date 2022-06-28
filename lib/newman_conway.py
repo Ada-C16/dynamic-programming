@@ -2,7 +2,7 @@
 def newman_conway(num):
     """ Returns a list of the Newman Conway numbers for the given value.
         Time Complexity: O(n)
-        Space Complexity: O(n) - it adds elements to result variav  while (i <= num)
+        Space Complexity: O(n) - it adds elements to result variable  while (i <= num)
     """
     # P(1) = 1
     # P(2) = 1
