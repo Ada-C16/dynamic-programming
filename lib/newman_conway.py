@@ -1,17 +1,14 @@
 
-
-# Time complexity: ?
-# Space Complexity: ?
 def newman_conway(num):
     """ Returns a list of the Newman Conway numbers for the given value.
         Time Complexity: O(n)
-        Space Complexity: O(1)
+        Space Complexity: O(n) - it adds elements to result variav  while (i <= num)
     """
     # P(1) = 1
     # P(2) = 1
     # for all n > 2
     # P(n) = P(P(n - 1)) + P(n - P(n - 1))
-    # use memoization table to store values fot each calcula item
+    # use memoization table to store values for each calcula item
     if num == 0:
         raise ValueError()
     if num == 1:
