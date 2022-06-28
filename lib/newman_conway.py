@@ -4,8 +4,8 @@
 # Space Complexity: ?
 def newman_conway(num):
     """ Returns a list of the Newman Conway numbers for the given value.
-        Time Complexity: ?
-        Space Complexity: ?
+        Time Complexity: O(n)
+        Space Complexity: O(1)
     """
     # P(1) = 1
     # P(2) = 1
