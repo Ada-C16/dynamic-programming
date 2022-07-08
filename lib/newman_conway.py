@@ -2,8 +2,8 @@
 # Space Complexity: ?
 def newman_conway(num):
     """Returns a list of the Newman Conway numbers for the given value.
-    Time Complexity: ?
-    Space Complexity: ?
+    Time Complexity: O(n) where n is num
+    Space Complexity: O(n) where n is num
     """
     if num <= 0:
         raise ValueError
