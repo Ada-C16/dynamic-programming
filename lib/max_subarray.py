@@ -5,8 +5,15 @@ def max_sub_array(nums):
         Time Complexity: ?
         Space Complexity: ?
     """
-    if nums == None:
+    if nums == None or len(nums) == 0:
         return 0
-    if len(nums) == 0:
-        return 0
-    pass
+    
+    current_sub = 0
+    max_sub = nums[0]
+
+    for num in nums:
+        if current_sub < 0:
+            current_sub = 0
+        current_sub += num
+        max_sub = max(max_sub, current_sub)
+    return max_sub
