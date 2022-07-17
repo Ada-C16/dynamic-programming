@@ -9,4 +9,16 @@ def max_sub_array(nums):
         return 0
     if len(nums) == 0:
         return 0
-    pass
+
+    max = - 10000000000000000000000000000000000000000000
+    curr_max = 0
+
+    for num in nums:
+        curr_max += num
+        if curr_max > max:
+            max = curr_max
+        if curr_max < 0:
+            curr_max = 0
+    return max
+
+
