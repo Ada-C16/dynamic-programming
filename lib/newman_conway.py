@@ -8,3 +8,4 @@ def newman_conway(num):
         Space Complexity: ?
     """
     pass
+    
