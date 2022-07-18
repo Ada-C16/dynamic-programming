@@ -7,5 +7,7 @@ def newman_conway(num):
         Time Complexity: ?
         Space Complexity: ?
     """
-    pass
-    
+    if num == 1 or num == 2: 
+        return 1 
+    else: 
+        return newman_conway(newman_conway(num - 1)) + newman_conway(num - newman_conway(num-1))
